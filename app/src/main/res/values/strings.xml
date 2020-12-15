@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyToDoListApp</string>
+    <string name="there_are_currently_no_tasks_on_your_to_do_list">There are currently no tasks on your to-do list</string>
+</resources>
