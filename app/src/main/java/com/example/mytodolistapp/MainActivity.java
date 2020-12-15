@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity implements CreateDialog.ToDo
         adapter = new ToDoListAdapter(
                 dbHelper.getAllTasks(),
                 getSupportFragmentManager(),
-                emptyTextMsg, dbHelper);
+                emptyTextMsg,
+                dbHelper);
 
         if (adapter.toDoTasks.size() > 0) {
             emptyTextMsg.setVisibility(View.INVISIBLE);
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements CreateDialog.ToDo
             adapter.toDoTasks.add(new ToDoTask(id, text, date, false));
             adapter.notifyItemInserted(adapter.toDoTasks.size());
             emptyTextMsg.setVisibility(View.INVISIBLE);
+            Toast.makeText(this, "Task Added to To-Do List!", Toast.LENGTH_SHORT).show();
         }
     }
 }

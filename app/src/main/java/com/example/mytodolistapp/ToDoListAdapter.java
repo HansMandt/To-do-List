@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public class ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ToDoLi
     private ToDoTaskDBHelper dbHelper;
     private TextView emptyTextView;
 
-    public ToDoListAdapter(ArrayList<ToDoTask> toDoTasks, TextView emptyTextView, ToDoTaskDBHelper dbHelper) {
+    public ToDoListAdapter(ArrayList<ToDoTask> toDoTasks, FragmentManager supportFragmentManager, TextView emptyTextView, ToDoTaskDBHelper dbHelper) {
         this.toDoTasks = toDoTasks;
         this.dbHelper = dbHelper;
         this.emptyTextView = emptyTextView;
